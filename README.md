@@ -2,12 +2,6 @@
 
 A high-fidelity Jira-like environment for humans *and* agents, running in a single Docker container. It ships with a browser UI, a REST API, and an MCP server — all three driving the same persistent state, plus a seeded "company" that feels lived-in from the first request.
 
-Quick demo of a computer-use agent creating an issue end-to-end in the env: https://drive.google.com/file/d/1tj1fhC8dmvYiBZBdxdHKi2xUR_jCTcBq/view?usp=sharing
-
-<img width="1512" height="982" alt="Screenshot 2026-05-27 at 8 16 00 PM" src="https://github.com/user-attachments/assets/1550a2ff-bbf0-4808-9707-729780523cb6" />
-<img width="1512" height="982" alt="Screenshot 2026-05-27 at 8 15 46 PM" src="https://github.com/user-attachments/assets/8acd3253-ead9-4c90-9e8e-074d83214d84" />
-<img width="1512" height="982" alt="Screenshot 2026-05-27 at 8 14 47 PM" src="https://github.com/user-attachments/assets/168987a2-19aa-47ec-8a08-05478e6824dd" />
-
 ## Three surfaces, one source of truth
 
 The core design decision: the UI, API, and MCP are not three implementations of the same product — they're three doors into one. Every one of them calls the same Python service layer, so a change made by a human clicking the UI, a script hitting REST, or an agent calling a tool all land in the same place and show up everywhere.
