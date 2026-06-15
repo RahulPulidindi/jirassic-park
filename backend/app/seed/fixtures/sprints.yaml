@@ -1,0 +1,78 @@
+# All sprints across projects. Dates reckoned from "today" (the day the
+# container is seeded). The seed builder converts the relative offsets.
+sprints:
+  # SCRUM - mobile app
+  - id: sprint_scrum_21
+    project_key: SCRUM
+    name: "Sprint 21 - Onboarding polish"
+    state: closed
+    start_offset_days: -56
+    end_offset_days: -42
+    completed_offset_days: -42
+    goal: "Polish onboarding flow and biometric login on iOS 17."
+
+  - id: sprint_scrum_22
+    project_key: SCRUM
+    name: "Sprint 22 - Login & auth"
+    state: closed
+    start_offset_days: -42
+    end_offset_days: -28
+    completed_offset_days: -28
+    goal: "Stabilize OAuth flow and password reset."
+
+  - id: sprint_scrum_23
+    project_key: SCRUM
+    name: "Sprint 23 - Notifications"
+    state: active
+    start_offset_days: -7
+    end_offset_days: 7
+    goal: "Ship push notifications v2 and address the inbox-zero feedback."
+
+  - id: sprint_scrum_24
+    project_key: SCRUM
+    name: "Sprint 24 - Search rewrite"
+    state: future
+    start_offset_days: 7
+    end_offset_days: 21
+    goal: "First half of the search rewrite (indexer + ranking)."
+
+  - id: sprint_scrum_25
+    project_key: SCRUM
+    name: "Sprint 25 - Search rewrite II"
+    state: future
+    start_offset_days: 21
+    end_offset_days: 35
+    goal: "Second half of search rewrite - filters and saved searches."
+
+  # PLAT - platform engineering
+  - id: sprint_plat_8
+    project_key: PLAT
+    name: "PLAT Sprint 8 - Observability"
+    state: closed
+    start_offset_days: -42
+    end_offset_days: -28
+    completed_offset_days: -28
+
+  - id: sprint_plat_9
+    project_key: PLAT
+    name: "PLAT Sprint 9 - Deploy pipeline"
+    state: active
+    start_offset_days: -7
+    end_offset_days: 7
+    goal: "Replace the legacy deploy pipeline with the blue/green system."
+
+  - id: sprint_plat_10
+    project_key: PLAT
+    name: "PLAT Sprint 10 - Cost cleanup"
+    state: future
+    start_offset_days: 7
+    end_offset_days: 21
+
+  # DEBT - tech debt
+  - id: sprint_debt_1
+    project_key: DEBT
+    name: "Debt Sprint - Q3 cleanup"
+    state: active
+    start_offset_days: -7
+    end_offset_days: 7
+    goal: "Ship the highest-ROI cleanup items before Q3 end."

@@ -1,0 +1,29 @@
+# Custom fields are scoped per project (or global if project_keys is empty).
+custom_fields:
+  - id: cf_severity
+    name: Severity
+    field_type: select
+    project_keys: ["SCRUM", "PLAT", "DEBT", "SUP"]
+    options: ["S1 - Critical", "S2 - Major", "S3 - Minor", "S4 - Trivial"]
+
+  - id: cf_root_cause
+    name: Root Cause
+    field_type: select
+    project_keys: ["SUP", "PLAT"]
+    options:
+      - "Code defect"
+      - "Configuration"
+      - "Infrastructure"
+      - "Third-party"
+      - "User error"
+      - "Unknown"
+
+  - id: cf_customer_impact
+    name: Customer Impact
+    field_type: text
+    project_keys: ["SUP"]
+
+  - id: cf_target_release
+    name: Target Release
+    field_type: text
+    project_keys: ["SCRUM"]

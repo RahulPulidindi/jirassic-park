@@ -1,0 +1,25 @@
+labels:
+  - frontend
+  - backend
+  - mobile
+  - ios
+  - android
+  - api
+  - infra
+  - database
+  - migration
+  - regression
+  - performance
+  - security
+  - accessibility
+  - tech-debt
+  - documentation
+  - testing
+  - customer-reported
+  - good-first-issue
+  - blocked
+  - urgent
+  - q3-okr
+  - q4-okr
+  - design-needed
+  - tracking

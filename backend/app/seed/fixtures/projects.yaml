@@ -1,0 +1,36 @@
+projects:
+  - key: SCRUM
+    name: Mobile App
+    description: "Customer-facing iOS and Android applications. Full sprint cadence."
+    project_type: software
+    lead_id: user_sarah_kim
+    default_assignee: user_sarah_kim
+    workflow_id: wf_software_scrum
+    avatar_color: "#3d63d9"
+
+  - key: PLAT
+    name: Platform Engineering
+    description: "Internal platform, infrastructure, observability, and developer experience."
+    project_type: software
+    lead_id: user_raj_patel
+    default_assignee: user_raj_patel
+    workflow_id: wf_software_scrum
+    avatar_color: "#0e7c43"
+
+  - key: DEBT
+    name: Tech Debt
+    description: "Cross-cutting tech debt and refactoring tracker. Lower-priority continuous work."
+    project_type: software
+    lead_id: user_maya_chen
+    default_assignee: user_maya_chen
+    workflow_id: wf_software_scrum
+    avatar_color: "#7e3aaf"
+
+  - key: SUP
+    name: Customer Support
+    description: "Inbound customer-reported issues. Triaged into engineering when needed."
+    project_type: service
+    lead_id: user_devon_lee
+    default_assignee: user_devon_lee
+    workflow_id: wf_support_kanban
+    avatar_color: "#e25822"

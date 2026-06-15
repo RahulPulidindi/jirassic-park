@@ -1,0 +1,15 @@
+services:
+  jirassic-park:
+    build: .
+    image: jirassic-park:latest
+    container_name: jirassic-park
+    ports:
+      - "8080:8080"
+    volumes:
+      - jirassic-data:/data
+    environment:
+      - DATA_DIR=/data
+      - JP_LOG_LEVEL=info
+
+volumes:
+  jirassic-data:

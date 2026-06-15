@@ -1,0 +1,40 @@
+teams:
+  - id: team_mobile
+    name: Mobile
+    description: "Mobile app team - iOS and Android"
+    members:
+      - { user: user_sarah_kim, role: lead }
+      - { user: user_priya_iyer, role: member }
+      - { user: user_jordan_smith, role: member }
+      - { user: user_camille_durand, role: member }
+      - { user: user_chloe_miller, role: member }
+
+  - id: team_platform
+    name: Platform
+    description: "Platform engineering and infrastructure"
+    members:
+      - { user: user_raj_patel, role: lead }
+      - { user: user_marcus_obrien, role: member }
+      - { user: user_lina_garcia, role: member }
+      - { user: user_aki_yamada, role: member }
+      - { user: user_noah_williams, role: member }
+      - { user: user_grace_okafor, role: member }
+      - { user: user_kenji_ito, role: member }
+
+  - id: team_data
+    name: Data
+    description: "Data pipelines and analytics"
+    members:
+      - { user: user_maya_chen, role: lead }
+      - { user: user_tomas_silva, role: member }
+      - { user: user_emma_rossi, role: member }
+      - { user: user_owen_walsh, role: member }
+      - { user: user_amara_singh, role: member }
+
+  - id: team_support
+    name: Support
+    description: "Customer support and SRE handoffs"
+    members:
+      - { user: user_devon_lee, role: lead }
+      - { user: user_dani_haddad, role: member }
+      - { user: user_yuki_tanaka, role: member }

@@ -1,0 +1,24 @@
+boards:
+  - id: board_scrum
+    project_key: SCRUM
+    name: "Mobile App Sprint Board"
+    board_type: scrum
+    filter_jql: 'project = "SCRUM"'
+
+  - id: board_plat
+    project_key: PLAT
+    name: "Platform Sprint Board"
+    board_type: scrum
+    filter_jql: 'project = "PLAT"'
+
+  - id: board_debt
+    project_key: DEBT
+    name: "Tech Debt Board"
+    board_type: scrum
+    filter_jql: 'project = "DEBT"'
+
+  - id: board_sup
+    project_key: SUP
+    name: "Support Kanban"
+    board_type: kanban
+    filter_jql: 'project = "SUP" AND status != "Closed"'

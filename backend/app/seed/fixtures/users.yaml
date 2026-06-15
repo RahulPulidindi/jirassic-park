@@ -1,0 +1,165 @@
+# 22 users, 1 admin + 4 leads + 13 developers + 4 reporters.
+# api_token values are deterministic for documentation/testing convenience.
+users:
+  - id: user_admin
+    email: admin@jirassic.dev
+    name: Alex Park
+    display_name: Alex
+    role: admin
+    avatar_color: "#0b1226"
+    api_token: admin-token-jurassic
+
+  # Project leads
+  - id: user_sarah_kim
+    email: sarah.kim@jirassic.dev
+    name: Sarah Kim
+    display_name: Sarah
+    role: member
+    avatar_color: "#3d63d9"
+    api_token: token_sarah_kim
+  - id: user_raj_patel
+    email: raj.patel@jirassic.dev
+    name: Raj Patel
+    display_name: Raj
+    role: member
+    avatar_color: "#e25822"
+    api_token: token_raj_patel
+  - id: user_maya_chen
+    email: maya.chen@jirassic.dev
+    name: Maya Chen
+    display_name: Maya
+    role: member
+    avatar_color: "#7e3aaf"
+    api_token: token_maya_chen
+  - id: user_devon_lee
+    email: devon.lee@jirassic.dev
+    name: Devon Lee
+    display_name: Devon
+    role: member
+    avatar_color: "#0e7c43"
+    api_token: token_devon_lee
+
+  # Developers
+  - id: user_priya_iyer
+    email: priya.iyer@jirassic.dev
+    name: Priya Iyer
+    display_name: Priya
+    role: member
+    avatar_color: "#cf2741"
+    api_token: token_priya_iyer
+  - id: user_jordan_smith
+    email: jordan.smith@jirassic.dev
+    name: Jordan Smith
+    display_name: Jordan
+    role: member
+    avatar_color: "#5575aa"
+    api_token: token_jordan_smith
+  - id: user_camille_durand
+    email: camille.durand@jirassic.dev
+    name: Camille Durand
+    display_name: Camille
+    role: member
+    avatar_color: "#b78600"
+    api_token: token_camille_durand
+  - id: user_marcus_obrien
+    email: marcus.obrien@jirassic.dev
+    name: Marcus O'Brien
+    display_name: Marcus
+    role: member
+    avatar_color: "#243f96"
+    api_token: token_marcus_obrien
+  - id: user_lina_garcia
+    email: lina.garcia@jirassic.dev
+    name: Lina Garcia
+    display_name: Lina
+    role: member
+    avatar_color: "#3da3df"
+    api_token: token_lina_garcia
+  - id: user_aki_yamada
+    email: aki.yamada@jirassic.dev
+    name: Aki Yamada
+    display_name: Aki
+    role: member
+    avatar_color: "#7a89b8"
+    api_token: token_aki_yamada
+  - id: user_noah_williams
+    email: noah.williams@jirassic.dev
+    name: Noah Williams
+    display_name: Noah
+    role: member
+    avatar_color: "#0b6ce7"
+    api_token: token_noah_williams
+  - id: user_grace_okafor
+    email: grace.okafor@jirassic.dev
+    name: Grace Okafor
+    display_name: Grace
+    role: member
+    avatar_color: "#a25f00"
+    api_token: token_grace_okafor
+  - id: user_tomas_silva
+    email: tomas.silva@jirassic.dev
+    name: Tomas Silva
+    display_name: Tomas
+    role: member
+    avatar_color: "#5d6a99"
+    api_token: token_tomas_silva
+  - id: user_emma_rossi
+    email: emma.rossi@jirassic.dev
+    name: Emma Rossi
+    display_name: Emma
+    role: member
+    avatar_color: "#2f4fb8"
+    api_token: token_emma_rossi
+  - id: user_owen_walsh
+    email: owen.walsh@jirassic.dev
+    name: Owen Walsh
+    display_name: Owen
+    role: member
+    avatar_color: "#0e7c43"
+    api_token: token_owen_walsh
+  - id: user_dani_haddad
+    email: dani.haddad@jirassic.dev
+    name: Dani Haddad
+    display_name: Dani
+    role: member
+    avatar_color: "#cf2741"
+    api_token: token_dani_haddad
+  - id: user_yuki_tanaka
+    email: yuki.tanaka@jirassic.dev
+    name: Yuki Tanaka
+    display_name: Yuki
+    role: member
+    avatar_color: "#7e3aaf"
+    api_token: token_yuki_tanaka
+
+  # Reporters (less mutating ability)
+  - id: user_chloe_miller
+    email: chloe.miller@jirassic.dev
+    name: Chloe Miller
+    display_name: Chloe
+    role: member
+    avatar_color: "#3d63d9"
+    api_token: token_chloe_miller
+  - id: user_kenji_ito
+    email: kenji.ito@jirassic.dev
+    name: Kenji Ito
+    display_name: Kenji
+    role: member
+    avatar_color: "#e25822"
+    api_token: token_kenji_ito
+  - id: user_amara_singh
+    email: amara.singh@jirassic.dev
+    name: Amara Singh
+    display_name: Amara
+    role: member
+    avatar_color: "#3da3df"
+    api_token: token_amara_singh
+
+  # Viewer-only account (for permission testing)
+  - id: user_observer
+    email: observer@jirassic.dev
+    name: Sam Observer
+    display_name: Sam
+    role: viewer
+    avatar_color: "#8a96bf"
+    api_token: token_observer

@@ -1,0 +1,75 @@
+saved_filters:
+  - id: filter_my_open_bugs
+    name: "Bugs assigned to me"
+    owner_id: user_sarah_kim
+    jql: 'assignee = currentUser() AND issue_type = "Bug" AND status != "Done"'
+    description: "Open bugs currently assigned to me, across all projects."
+    shared: true
+
+  - id: filter_stale_p0_p1
+    name: "Stale P0/P1"
+    owner_id: user_raj_patel
+    jql: 'priority in ("Highest", "High") AND status != "Done" AND updated <= -14d'
+    description: "High-priority issues that haven't been touched in 2 weeks."
+    shared: true
+
+  - id: filter_active_sprint_inprogress
+    name: "Active sprint - In Progress"
+    owner_id: user_sarah_kim
+    jql: 'project = "SCRUM" AND sprint = "Sprint 23 - Notifications" AND status = "In Progress"'
+    shared: true
+
+  - id: filter_closed_this_week
+    name: "Closed this week"
+    owner_id: user_admin
+    jql: 'status = "Done" AND updated >= -7d'
+    description: "Anything resolved in the last 7 days."
+    shared: true
+
+  - id: filter_unassigned_plat
+    name: "Unassigned in PLAT"
+    owner_id: user_raj_patel
+    jql: 'project = "PLAT" AND assignee = unassigned() AND status != "Done"'
+    shared: true
+
+  - id: filter_my_reviews
+    name: "Awaiting my review"
+    owner_id: user_raj_patel
+    jql: 'status = "In Review" AND assignee = currentUser()'
+    shared: true
+
+  - id: filter_customer_reported
+    name: "Customer-reported bugs"
+    owner_id: user_devon_lee
+    jql: 'labels = "customer-reported" AND issue_type = "Bug"'
+    shared: true
+
+  - id: filter_q3_okr
+    name: "Q3 OKR work"
+    owner_id: user_admin
+    jql: 'labels = "q3-okr"'
+    shared: true
+
+  - id: filter_tech_debt_backlog
+    name: "Tech debt backlog"
+    owner_id: user_maya_chen
+    jql: 'project = "DEBT" AND status = "Backlog"'
+    shared: true
+
+  - id: filter_recently_updated
+    name: "Recently updated by me"
+    owner_id: user_sarah_kim
+    jql: 'updated >= -1d AND assignee = currentUser() ORDER BY updated DESC'
+    shared: true
+
+  - id: filter_blocked
+    name: "Blocked"
+    owner_id: user_raj_patel
+    jql: 'labels = "blocked" AND status != "Done"'
+    shared: true
+
+  - id: filter_open_support
+    name: "Open support tickets"
+    owner_id: user_devon_lee
+    jql: 'project = "SUP" AND status not in ("Resolved", "Closed") ORDER BY priority DESC, created ASC'
+    shared: true

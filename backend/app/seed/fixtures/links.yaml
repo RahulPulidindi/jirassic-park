@@ -1,0 +1,11 @@
+# Cross-project and intra-project links. Source/target use the eventual issue
+# keys after numbering. Format: "{PROJECT}-{id_hint}" matches the id_hint field
+# in the content modules.
+links:
+  - { source: "SCRUM-10", target: "PLAT-12", link_type: blocks }   # search bug -> tokenizer fix
+  - { source: "SCRUM-10", target: "PLAT-6",  link_type: relates }
+  - { source: "SUP-6",    target: "SCRUM-10", link_type: duplicates }
+  - { source: "SCRUM-24", target: "PLAT-9",  link_type: relates }  # search rewrite -> logging migration
+  - { source: "DEBT-1",   target: "DEBT-2",  link_type: relates }
+  - { source: "DEBT-3",   target: "PLAT-9",  link_type: relates }
+  - { source: "PLAT-1",   target: "SCRUM-1", link_type: relates }

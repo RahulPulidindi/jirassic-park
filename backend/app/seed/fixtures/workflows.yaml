@@ -1,0 +1,142 @@
+# Two workflows. Projects pick one; their issues' statuses must come from it.
+# `board_list` is what shows up as the swimlane on a board for issues in that status.
+workflows:
+  - id: wf_software_scrum
+    name: software-scrum
+    description: "Standard software development workflow with code review."
+    statuses:
+      - id: status_scrum_backlog
+        name: Backlog
+        category: todo
+        color: "#5d6a99"
+        board_list: Backlog
+        position: 0
+        is_initial: true
+      - id: status_scrum_todo
+        name: To Do
+        category: todo
+        color: "#5d6a99"
+        board_list: To Do
+        position: 1
+      - id: status_scrum_inprogress
+        name: In Progress
+        category: in_progress
+        color: "#0b6ce7"
+        board_list: In Progress
+        position: 2
+      - id: status_scrum_inreview
+        name: In Review
+        category: in_progress
+        color: "#a25f00"
+        board_list: In Review
+        position: 3
+      - id: status_scrum_done
+        name: Done
+        category: done
+        color: "#0e7c43"
+        board_list: Done
+        position: 4
+    transitions:
+      - from: status_scrum_backlog
+        to: status_scrum_todo
+        name: Start planning
+      - from: status_scrum_backlog
+        to: status_scrum_inprogress
+        name: Start work
+      - from: status_scrum_todo
+        to: status_scrum_inprogress
+        name: Start work
+      - from: status_scrum_todo
+        to: status_scrum_backlog
+        name: Move back to backlog
+      - from: status_scrum_inprogress
+        to: status_scrum_inreview
+        name: Submit for review
+      - from: status_scrum_inreview
+        to: status_scrum_inprogress
+        name: Request changes
+      - from: status_scrum_inreview
+        to: status_scrum_done
+        name: Approve
+      - from: status_scrum_inprogress
+        to: status_scrum_done
+        name: Resolve
+      - from: status_scrum_done
+        to: status_scrum_inprogress
+        name: Reopen
+      - from: status_scrum_inprogress
+        to: status_scrum_todo
+        name: Pause
+
+  - id: wf_support_kanban
+    name: support-kanban
+    description: "Support ticket workflow focused on fast triage and resolution."
+    statuses:
+      - id: status_sup_open
+        name: Open
+        category: todo
+        color: "#5d6a99"
+        board_list: Open
+        position: 0
+        is_initial: true
+      - id: status_sup_triaged
+        name: Triaged
+        category: todo
+        color: "#5d6a99"
+        board_list: Triaged
+        position: 1
+      - id: status_sup_working
+        name: Working
+        category: in_progress
+        color: "#0b6ce7"
+        board_list: Working
+        position: 2
+      - id: status_sup_waiting
+        name: Waiting
+        category: in_progress
+        color: "#a25f00"
+        board_list: Waiting on customer
+        position: 3
+      - id: status_sup_resolved
+        name: Resolved
+        category: done
+        color: "#0e7c43"
+        board_list: Resolved
+        position: 4
+      - id: status_sup_closed
+        name: Closed
+        category: done
+        color: "#0e7c43"
+        board_list: Closed
+        position: 5
+    transitions:
+      - from: status_sup_open
+        to: status_sup_triaged
+        name: Triage
+      - from: status_sup_open
+        to: status_sup_working
+        name: Start work
+      - from: status_sup_triaged
+        to: status_sup_working
+        name: Start work
+      - from: status_sup_triaged
+        to: status_sup_closed
+        name: Close as not-a-bug
+      - from: status_sup_working
+        to: status_sup_waiting
+        name: Waiting on customer
+      - from: status_sup_waiting
+        to: status_sup_working
+        name: Resume
+      - from: status_sup_working
+        to: status_sup_resolved
+        name: Resolve
+      - from: status_sup_resolved
+        to: status_sup_closed
+        name: Close
+      - from: status_sup_resolved
+        to: status_sup_working
+        name: Reopen
+      - from: status_sup_closed
+        to: status_sup_working
+        name: Reopen
